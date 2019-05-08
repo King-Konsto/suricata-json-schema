@@ -8,7 +8,7 @@ RUN echo "deb-src http://deb.debian.org/debian buster-updates main" >> /etc/apt/
 
 RUN apt-get update && apt-get dist-upgrade -y && apt-get build-dep suricata -y
 
-RUN apt-get -y install libnetfilter-queue-dev liblz4-dev rustc cargo git python3-pip wget tar
+RUN apt-get -y install libnetfilter-queue-dev liblz4-dev rustc cargo git python3-pip wget tar tcpdump tcpreplay
 
 RUN pip3 install genson
 
