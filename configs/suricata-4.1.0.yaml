@@ -125,7 +125,7 @@ outputs:
       # helpful when reviewing alerts for traffic that is being reverse
       # or forward proxied.
       xff:
-        enabled: no
+        enabled: yes
         # Two operation modes are available, "extra-data" and "overwrite".
         mode: extra-data
         # Two proxy deployments are supported, "reverse" and "forward". In
