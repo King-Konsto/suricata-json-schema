@@ -6,6 +6,7 @@ run:
 	docker run -i -t --rm --mount type=bind,source="$(shell pwd)"/pcaps,target=/pcaps suricata/schemabuilder
 
 build:
+	sudo rm -rf $(PCAP_DIR)/logs/filestore
 	docker build -t suricata/schemabuilder .
 
 pcaps:
