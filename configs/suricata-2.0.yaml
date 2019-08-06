@@ -61,7 +61,7 @@ host-mode: auto
 # The default logging directory.  Any log or output file will be
 # placed here if its not specified with a full path name.  This can be
 # overridden with the -l command line parameter.
-default-log-dir: @e_logdir@
+default-log-dir: /tmp
 
 # Unix command socket can be used to pass commands to suricata.
 # An external tool can then connect to get information from suricata
@@ -265,7 +265,6 @@ outputs:
 
 # Magic file. The extension .mgc is added to the value here.
 #magic-file: /usr/share/file/magic
-magic-file: @e_magic_file@
 
 # When running in NFQ inline mode, it is possible to use a simulated
 # non-terminal NFQUEUE verdict.
@@ -904,7 +903,7 @@ ipfw:
 
 # Set the default rule path here to search for the files.
 # if not set, it will look at the current working dir
-default-rule-path: @e_sysconfdir@rules
+default-rule-path: /etc/suricata/rules
 rule-files:
  - botcc.rules
  - ciarmy.rules
@@ -955,8 +954,8 @@ rule-files:
  - dns-events.rules     # available in suricata sources under rules dir
  - tls-events.rules     # available in suricata sources under rules dir
 
-classification-file: @e_sysconfdir@classification.config
-reference-config-file: @e_sysconfdir@reference.config
+classification-file: /etc/suricata/classification.config
+reference-config-file: /etc/suricata/reference.config
 
 # Holds variables that would be used by the engine.
 vars:
