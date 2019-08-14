@@ -1,0 +1,14 @@
+1c1
+< `configure' configures suricata 3.2dev to adapt to many kinds of systems.
+---
+> `configure' configures suricata 4.0.0-dev to adapt to many kinds of systems.
+118a119,122
+>   --enable-rust           Enable Experimental Rust support
+>   --enable-rust-experimental
+>                           Enable support for experimental Rus parsers
+>   --enable-rust-strict    Rust warnings as errors
+145d148
+<   --with-netfilterforwin-includes=DIR  netfilterforwin include directory
+179a183,184
+>   --with-libevent-includes=DIR  libevent include directory
+>   --with-libevent-libraries=DIR    libevent library directory

@@ -1,0 +1,34 @@
+1c1
+< `configure' configures suricata 4.0.0-dev to adapt to many kinds of systems.
+---
+> `configure' configures suricata 4.1.0-dev to adapt to many kinds of systems.
+88a89
+>   --enable-ebpf-build     Enable compilation of ebpf files
+101a103
+>   --enable-windivert      Enable WinDivert support [default=no]
+109c111
+<   --enable-cuda           Enable experimental CUDA pattern matching
+---
+>   --enable-ebpf           Enable eBPF support
+121,123c123
+<   --enable-rust           Enable Experimental Rust support
+<   --enable-rust-experimental
+<                           Enable support for experimental Rus parsers
+---
+>   --enable-rust           Enable Rust support
+124a125
+>   --enable-rust-debug     Rust not in --release mode
+136a138,141
+>   --with-zlib-includes=DIR  zlib include directory
+>   --with-zlib-libraries=DIR    zlib library directory
+>   --with-liblzma-includes=DIR  liblzma include directory
+>   --with-liblzma-libraries=DIR    liblzma library directory
+152a158,159
+>   --with-windivert-include=DIR WinDivert include path
+>   --with-windivert-libraries=DIR WinDivert library path
+164,166d170
+<   --with-cuda-includes=DIR  cuda include directory
+<   --with-cuda-libraries=DIR    cuda library directory
+<   --with-cuda-nvcc=DIR  cuda nvcc compiler directory
+228d231
+<   PYTHON      the Python interpreter

@@ -1,0 +1,30 @@
+1c1
+< `configure' configures suricata 2.0dev to adapt to many kinds of systems.
+---
+> `configure' configures suricata 3.0dev to adapt to many kinds of systems.
+80a81
+>   --disable-threading-tls Disable TLS (thread local storage)]
+97d97
+<   --enable-nfqueue        Enable NFQUEUE support for inline IDP
+98a99
+>   --enable-nfqueue        Enable NFQUEUE support for inline IDP
+101a103
+>   --enable-netmap         Enable Netmap support
+110a113,115
+>   --enable-pie            Enable compiling as a position independent
+>                           executable
+>   --enable-hiredis        Enable Redis support
+142,143d146
+<   --with-libpfring-includes=DIR  libpfring include directory
+<   --with-libpfring-libraries=DIR    libpfring library directory
+145a149,151
+>   --with-libpfring-includes=DIR  libpfring include directory
+>   --with-libpfring-libraries=DIR    libpfring library directory
+>   --with-netmap-includes=DIR netmap include directory
+168a175,176
+>   --with-libhiredis-includes=DIR  libhiredis include directory
+>   --with-libhiredis-libraries=DIR    libhiredis library directory
+185a194,196
+>   libhtp_CFLAGS
+>               C compiler flags for libhtp, overriding pkg-config
+>   libhtp_LIBS linker flags for libhtp, overriding pkg-config
