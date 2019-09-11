@@ -46,7 +46,7 @@ host-mode: auto
 
 # Default pid file.
 # Will use this file if no --pidfile in command options.
-#pid-file: /var/run/suricata.pid
+#pid-file: /var/run//suricata.pid
 
 # Daemon working directory
 # Suricata will change directory to this one if provided
@@ -1015,8 +1015,8 @@ action-order:
   - alert
 
 # IP Reputation
-#reputation-categories-file: @e_sysconfdir@iprep/categories.txt
-#default-reputation-path: @e_sysconfdir@iprep
+#reputation-categories-file: /etc/suricata/iprep/categories.txt
+#default-reputation-path: /etc/suricata/iprep
 #reputation-files:
 # - reputation.list
 

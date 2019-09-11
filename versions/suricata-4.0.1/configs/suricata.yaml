@@ -49,7 +49,7 @@ vars:
 ## Step 2: select the rules to enable or disable
 ##
 
-default-rule-path: @e_sysconfdir@rules
+default-rule-path: /rules
 rule-files:
  - botcc.rules
  # - botcc.portgrouped.rules
@@ -107,9 +107,9 @@ rule-files:
 # - dnp3-events.rules       # available in suricata sources under rules dir
 # - ntp-events.rules       # available in suricata sources under rules dir
 
-classification-file: @e_sysconfdir@classification.config
-reference-config-file: @e_sysconfdir@reference.config
-# threshold-file: @e_sysconfdir@threshold.config
+classification-file: /etc/suricata/classification.config
+reference-config-file: /etc/suricata/reference.config
+# threshold-file: /etc/suricata/threshold.config
 
 
 ##
@@ -119,7 +119,7 @@ reference-config-file: @e_sysconfdir@reference.config
 # The default logging directory.  Any log or output file will be
 # placed here if its not specified with a full path name. This can be
 # overridden with the -l command line parameter.
-default-log-dir: @e_logdir@
+default-log-dir: /logs/
 
 # global stats configuration
 stats:
@@ -139,7 +139,7 @@ outputs:
 
   # Extensible Event Format (nicknamed EVE) event log in JSON format
   - eve-log:
-      enabled: @e_enable_evelog@
+      enabled: yes
       filetype: regular #regular|syslog|unix_dgram|unix_stream|redis
       filename: eve.json
       #prefix: "@cee: " # prefix to prepend to each log entry
@@ -238,7 +238,7 @@ outputs:
             #md5: [body, subject]
 
         #- dnp3
-        @rust_config_comment@- nfs
+        - nfs
         - ssh
         - stats:
             totals: yes       # stats for all threads merged together
@@ -525,7 +525,7 @@ logging:
   - file:
       enabled: yes
       level: info
-      filename: @e_logdir@suricata.log
+      filename: /logs/suricata.log
       # type: json
   - syslog:
       enabled: no
@@ -743,7 +743,7 @@ app-layer:
     # Note: NFS parser depends on Rust support: pass --enable-rust
     # to configure.
     nfs:
-      enabled: @rust_config_enabled@
+      enabled: yes
     dns:
       # memcaps. Globally and per flow/state.
       #global-memcap: 16mb
@@ -903,7 +903,7 @@ app-layer:
     # Note: parser depends on experimental Rust support
     # with --enable-rust-experimental passed to configure
     ntp:
-      enabled: @rust_config_exp_enabled@
+      enabled: yes
 
 # Limit for the maximum number of asn1 frames to decode (default 256)
 asn1-max-frames: 256
@@ -931,7 +931,7 @@ asn1-max-frames: 256
 # Default location of the pid file. The pid file is only used in
 # daemon mode (start Suricata with -D). If not running in daemon mode
 # the --pidfile command line option must be used to create a pid file.
-#pid-file: @e_rundir@suricata.pid
+#pid-file: /var/run/suricata.pid
 
 # Daemon working directory
 # Suricata will change directory to this one if provided
@@ -1000,7 +1000,7 @@ unix-command:
 
 # Magic file. The extension .mgc is added to the value here.
 #magic-file: /usr/share/file/magic
-@e_magic_file_comment@magic-file: @e_magic_file@
+magic-file: /usr/lib/file/magic.mgc
 
 legacy:
   uricontent: enabled
@@ -1018,8 +1018,8 @@ legacy:
 #   - alert
 
 # IP Reputation
-#reputation-categories-file: @e_sysconfdir@iprep/categories.txt
-#default-reputation-path: @e_sysconfdir@iprep
+#reputation-categories-file: /etc/suricata/iprep/categories.txt
+#default-reputation-path: /etc/suricata/iprep
 #reputation-files:
 # - reputation.list
 
@@ -1447,7 +1447,7 @@ profiling:
     limit: 10
 
     # output to json
-    json: @e_enable_evelog@
+    json: yes
 
   # per keyword profiling
   keywords:

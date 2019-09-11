@@ -47,7 +47,7 @@ vars:
 ## Step 2: select the rules to enable or disable
 ##
 
-default-rule-path: @e_sysconfdir@rules
+default-rule-path: /rules
 rule-files:
  - botcc.rules
  - ciarmy.rules
@@ -100,9 +100,9 @@ rule-files:
 # - modbus-events.rules  # available in suricata sources under rules dir
 # - app-layer-events.rules  # available in suricata sources under rules dir
 
-classification-file: @e_sysconfdir@classification.config
-reference-config-file: @e_sysconfdir@reference.config
-# threshold-file: @e_sysconfdir@threshold.config
+classification-file: /etc/suricata/classification.config
+reference-config-file: /etc/suricata/reference.config
+# threshold-file: /etc/suricata/threshold.config
 
 
 ##
@@ -112,7 +112,7 @@ reference-config-file: @e_sysconfdir@reference.config
 # The default logging directory.  Any log or output file will be
 # placed here if its not specified with a full path name. This can be
 # overridden with the -l command line parameter.
-default-log-dir: @e_logdir@
+default-log-dir: /logs/
 
 # global stats configuration
 stats:
@@ -132,7 +132,7 @@ outputs:
 
   # Extensible Event Format (nicknamed EVE) event log in JSON format
   - eve-log:
-      enabled: @e_enable_evelog@
+      enabled: yes
       filetype: regular #regular|syslog|unix_dgram|unix_stream|redis
       filename: eve.json
       #prefix: "@cee: " # prefix to prepend to each log entry
@@ -464,7 +464,7 @@ logging:
   - file:
       enabled: yes
       level: info
-      filename: @e_logdir@suricata.log
+      filename: /logs/suricata.log
       # type: json
   - syslog:
       enabled: no
@@ -838,7 +838,7 @@ asn1-max-frames: 256
 
 # Default pid file.
 # Will use this file if no --pidfile in command options.
-#pid-file: @e_rundir@suricata.pid
+#pid-file: /var/run/suricata.pid
 
 # Daemon working directory
 # Suricata will change directory to this one if provided
@@ -906,7 +906,7 @@ unix-command:
 
 # Magic file. The extension .mgc is added to the value here.
 #magic-file: /usr/share/file/magic
-@e_magic_file_comment@magic-file: @e_magic_file@
+magic-file: /usr/lib/file/magic.mgc
 
 legacy:
   uricontent: enabled
@@ -924,8 +924,8 @@ legacy:
 #   - alert
 
 # IP Reputation
-#reputation-categories-file: @e_sysconfdir@iprep/categories.txt
-#default-reputation-path: @e_sysconfdir@iprep
+#reputation-categories-file: /etc/suricata/iprep/categories.txt
+#default-reputation-path: /etc/suricata/iprep
 #reputation-files:
 # - reputation.list
 
@@ -1338,7 +1338,7 @@ profiling:
     limit: 100
 
     # output to json
-    json: @e_enable_evelog@
+    json: yes
 
   # per keyword profiling
   keywords:
