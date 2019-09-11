@@ -109,7 +109,7 @@ rule-files:
 
 classification-file: /etc/suricata/lassification.config
 reference-config-file: /etc/suricata/reference.config
-# threshold-file: @e_sysconfdir@threshold.config
+# threshold-file: /etc/suricata/threshold.config
 
 
 ##
@@ -932,7 +932,7 @@ asn1-max-frames: 256
 # Default location of the pid file. The pid file is only used in
 # daemon mode (start Suricata with -D). If not running in daemon mode
 # the --pidfile command line option must be used to create a pid file.
-#pid-file: @e_rundir@suricata.pid
+#pid-file: /var/run/suricata.pid
 
 # Daemon working directory
 # Suricata will change directory to this one if provided
@@ -1018,8 +1018,8 @@ legacy:
 #   - alert
 
 # IP Reputation
-#reputation-categories-file: @e_sysconfdir@iprep/categories.txt
-#default-reputation-path: @e_sysconfdir@iprep
+#reputation-categories-file: /etc/suricata/iprep/categories.txt
+#default-reputation-path: /etc/suricata/iprep
 #reputation-files:
 # - reputation.list
 
