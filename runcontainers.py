@@ -8,16 +8,16 @@ from signal import *
 import sys
 import time
 
+nof_threads = 4
 logging.basicConfig(level=logging.INFO)
-
 
 f = []
 for (dirpath, dirnames, filenames) in os.walk("./versions"):
     f.extend(dirnames)
     break
 
-nof_threads = 2
-logging.info(f)
+
+logging.info("versions: ", f)
 
 client = docker.from_env()
 
@@ -26,7 +26,7 @@ def work(versions):
     global do_stop
     while True:
         if do_stop:
-            logging.info("stopping worker, stop was set")
+            logging.info("stopping worker")
             break
         try:
             v = versions.pop()
@@ -51,8 +51,6 @@ def run_version(sversion):
     if sversion >= "suricata-4.1.0":
         entry_script = "/mybin/run_post4.1.sh"
 
-    logging.info(entry_script)
-    
     cont = client.containers.create('satta/%s' % sversion,
                                     command="/bin/bash",
                                     tty=True,
@@ -67,7 +65,7 @@ def run_version(sversion):
 def stop_containers(*args):
     global do_stop
     do_stop = True
-    logging.info("stopped via sig, containers %s", client.containers.list())
+    logging.info("stopped via sig, running containers: %s", client.containers.list())
     for c in client.containers.list():
         logging.info("stopping %s", c)
         try:
