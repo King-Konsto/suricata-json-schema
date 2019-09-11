@@ -17,8 +17,8 @@ pcaps:
 	# http://www.ll.mit.edu/mission/communications/cyber/CSTcorpora/ideval/data/ is down
 	# these are huge
 	#cd $(PCAP_DIR) && wget -nd -P . -r -l 2 --no-parent -A '*.pcap.gz' 'https://download.netresec.com/pcap/'
-    #cd $(PCAP_DIR) && wget --no-check-certificate -nd -P . -r -l 3 --no-parent -A '*.pcap' 'https://mcfp.felk.cvut.cz/publicDatasets/'
-	#cd $(PCAP_DIR) && python $(BIN_DIR)/scrape_ws.py
+	#cd $(PCAP_DIR) && wget --no-check-certificate -nd -P . -r -l 3 --no-parent -A '*.pcap' 'https://mcfp.felk.cvut.cz/publicDatasets/'
+	cd $(PCAP_DIR) && python $(BIN_DIR)/scrape_ws.py
 	cd $(PCAP_DIR) \
 	   && wget https://github.com/zeek/zeek/archive/master.zip \
 	   && unzip -qq master.zip \
@@ -27,7 +27,8 @@ pcaps:
 	   && rm -rf zeek-master
 	find $(PCAP_DIR) -name '*.pcap.gz' -exec gunzip {} \;
 	find $(PCAP_DIR) -name '*.pcapng' -exec editcap -F libpcap {} {}.pcap \;
-
+	find $(PCAP_DIR) -name '*.pcapng' -delete
+	chmod -R 0755 $(PCAP_DIR)
 
 clean:
 	rm -rf pcaps/
