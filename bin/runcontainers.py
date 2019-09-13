@@ -12,7 +12,7 @@ nof_threads = 4
 logging.basicConfig(level=logging.INFO)
 
 f = []
-for (dirpath, dirnames, filenames) in os.walk("./versions"):
+for (dirpath, dirnames, filenames) in os.walk("../versions"):
     f.extend(dirnames)
     break
 
@@ -35,11 +35,11 @@ def work(versions):
             break
 
 def run_version(sversion):
-    config_path = os.path.realpath('./versions/%s/configs' % sversion)
-    pcaps_path = os.path.realpath('./pcaps')
-    logs_path = os.path.realpath('./versions/%s/logs' % sversion)
-    rules_path = os.path.realpath('./rules')
-    bin_path = os.path.realpath('./bin')
+    config_path = os.path.realpath('../versions/%s/configs' % sversion)
+    pcaps_path = os.path.realpath('../pcaps')
+    logs_path = os.path.realpath('../versions/%s/logs' % sversion)
+    rules_path = os.path.realpath('../rules')
+    bin_path = os.path.realpath('./')
     volumes = {}
     volumes[config_path] = {'bind': '/configs', 'mode':'ro'}
     volumes[pcaps_path] = {'bind': '/pcaps', 'mode':'ro'}
@@ -48,8 +48,6 @@ def run_version(sversion):
     volumes[bin_path] = {'bind': '/mybin', 'mode':'ro'}
 
     entry_script = "/mybin/run.sh"
-    if sversion >= "suricata-4.1.0":
-        entry_script = "/mybin/run_post4.1.sh"
 
     cont = client.containers.create('satta/%s' % sversion,
                                     command="/bin/bash",
