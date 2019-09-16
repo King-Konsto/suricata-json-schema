@@ -103,14 +103,14 @@ outputs:
         - tls:
             extended: yes     # enable this for extended logging information
         - files:
-            force-magic: no   # force logging magic on all logged files
-            force-md5: no     # force logging of md5 checksums
-        #- drop
+            force-magic: yes   # force logging magic on all logged files
+            force-md5: yes     # force logging of md5 checksums
+        - drop
         - ssh
 
   # alert output for use with Barnyard2
   - unified2-alert:
-      enabled: yes
+      enabled: no
       filename: unified2.alert
 
       # File size limit.  Can be specified in kb, mb, gb.  Just a number
@@ -250,10 +250,10 @@ outputs:
   # - http request / response body sizes. Again set to 0 for optimal results.
   # - rules that contain the "filestore" keyword.
   - file-store:
-      enabled: no       # set to yes to enable
+      enabled: yes       # set to yes to enable
       log-dir: files    # directory to store the files
-      force-magic: no   # force logging magic on all stored files
-      force-md5: no     # force logging of md5 checksums
+      force-magic: yes   # force logging magic on all stored files
+      force-md5: yes     # force logging of md5 checksums
       #waldo: file.waldo # waldo file to store the file_id across runs
 
   # output module to log files tracked in a easily parsable json format
@@ -924,56 +924,26 @@ ipfw:
 
 # Set the default rule path here to search for the files.
 # if not set, it will look at the current working dir
-default-rule-path: /rules
+default-rule-path: /rules/
 rule-files:
- - botcc.rules
- - ciarmy.rules
- - compromised.rules
- - drop.rules
- - dshield.rules
- - emerging-activex.rules
- - emerging-attack_response.rules
- - emerging-chat.rules
- - emerging-current_events.rules
- - emerging-dns.rules
- - emerging-dos.rules
- - emerging-exploit.rules
- - emerging-ftp.rules
- - emerging-games.rules
- - emerging-icmp_info.rules
-# - emerging-icmp.rules
- - emerging-imap.rules
- - emerging-inappropriate.rules
- - emerging-malware.rules
- - emerging-misc.rules
- - emerging-mobile_malware.rules
- - emerging-netbios.rules
- - emerging-p2p.rules
- - emerging-policy.rules
- - emerging-pop3.rules
- - emerging-rpc.rules
- - emerging-scada.rules
- - emerging-scan.rules
- - emerging-shellcode.rules
- - emerging-smtp.rules
- - emerging-snmp.rules
- - emerging-sql.rules
- - emerging-telnet.rules
- - emerging-tftp.rules
- - emerging-trojan.rules
- - emerging-user_agents.rules
- - emerging-voip.rules
- - emerging-web_client.rules
- - emerging-web_server.rules
- - emerging-web_specific_apps.rules
- - emerging-worm.rules
- - tor.rules
+ - 2.0-emerging-all.rules
+# - 4.0-emerging-all.rules
+ - all.rules
+ - files.rules
  - decoder-events.rules # available in suricata sources under rules dir
  - stream-events.rules  # available in suricata sources under rules dir
  - http-events.rules    # available in suricata sources under rules dir
  - smtp-events.rules    # available in suricata sources under rules dir
  - dns-events.rules     # available in suricata sources under rules dir
  - tls-events.rules     # available in suricata sources under rules dir
+# - modbus-events.rules  # available in suricata sources under rules dir
+# - app-layer-events.rules  # available in suricata sources under rules dir
+# - dnp3-events.rules       # available in suricata sources under rules dir
+# - ntp-events.rules       # available in suricata sources under rules dir
+# - ipsec-events.rules       # available in suricata sources under rules dir
+# - kerberos-events.rules       # available in suricata sources under rules dir
+# - nfs-events.rules
+# - smb-events.rules
 
 classification-file: /etc/suricata/classification.config
 reference-config-file: /etc/suricata/reference.config
@@ -1106,16 +1076,16 @@ app-layer:
     smtp:
       enabled: yes
     imap:
-      enabled: detection-only
+      enabled: yes
     msn:
-      enabled: detection-only
+      enabled: yes
     smb:
       enabled: yes
       detection-ports:
-        dp: 139
+        dp: 139, 445
     # smb2 detection is disabled internally inside the engine.
-    #smb2:
-    #  enabled: yes
+    smb2:
+      enabled: yes
     dns:
       # memcaps. Globally and per flow/state.
       #global-memcap: 16mb
@@ -1214,8 +1184,8 @@ app-layer:
            #randomize-inspection-range: 10
 
            # decoding
-           double-decode-path: no
-           double-decode-query: no
+           double-decode-path: yes
+           double-decode-query: yes
 
          server-config:
 
