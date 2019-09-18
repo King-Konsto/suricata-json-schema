@@ -61,9 +61,9 @@ stats:
   # the loggers are invoked.
   interval: 8
   # Add decode events as stats.
-  #decoder-events: true
+  decoder-events: true
   # Add stream events as stats.
-  #stream-events: false
+  stream-events: true
 
 # Configure the type of alert (and other) logging you would like.
 outputs:
@@ -102,10 +102,10 @@ outputs:
       #    batch-size: 10 ## number of entry to keep in buffer
 
       # Include top level metadata. Default yes.
-      #metadata: no
+      metadata: yes
 
       # include the name of the input pcap file in pcap file processing mode
-      pcap-file: false
+      pcap-file: true
 
       # Community Flow ID
       # Adds a 'community_id' field to EVE records. These are meant to give
@@ -116,9 +116,9 @@ outputs:
       # to make the id less predictable.
 
       # enable/disable the community id feature.
-      community-id: false
+      community-id: true
       # Seed value for the ID output. Valid values are 0-65535.
-      community-id-seed: 0
+      community-id-seed: 42
 
       # HTTP X-Forwarded-For support by adding an extra field or overwriting
       # the source or destination IP address (depending on flow direction)
@@ -126,7 +126,7 @@ outputs:
       # helpful when reviewing alerts for traffic that is being reverse
       # or forward proxied.
       xff:
-        enabled: no
+        enabled: yes
         # Two operation modes are available, "extra-data" and "overwrite".
         mode: extra-data
         # Two proxy deployments are supported, "reverse" and "forward". In
@@ -140,13 +140,13 @@ outputs:
 
       types:
         - alert:
-            # payload: yes             # enable dumping payload in Base64
-            # payload-buffer-size: 4kb # max size of payload buffer to output in eve-log
-            # payload-printable: yes   # enable dumping payload in printable (lossy) format
-            # packet: yes              # enable dumping of packet (without stream segments)
-            # http-body: yes           # enable dumping of http body in Base64
-            # http-body-printable: yes # enable dumping of http body in printable format
-            # metadata: no             # enable inclusion of app layer metadata with alert. Default yes
+            payload: yes             # enable dumping payload in Base64
+            payload-buffer-size: 4kb # max size of payload buffer to output in eve-log
+            payload-printable: yes   # enable dumping payload in printable (lossy) format
+            packet: yes              # enable dumping of packet (without stream segments)
+            http-body: yes           # enable dumping of http body in Base64
+            http-body-printable: yes # enable dumping of http body in printable format
+            metadata: yes             # enable inclusion of app layer metadata with alert. Default yes
 
             # Enable the logging of tagged packets for rules using the
             # "tag" keyword.
@@ -168,20 +168,20 @@ outputs:
             version: 2
 
             # Enable/disable this logger. Default: enabled.
-            #enabled: no
+            enabled: yes
 
             # Control logging of requests and responses:
             # - requests: enable logging of DNS queries
             # - responses: enable logging of DNS answers
             # By default both requests and responses are logged.
-            #requests: no
-            #responses: no
+            requests: yes
+            responses: yes
 
             # Format of answer logging:
             # - detailed: array item per answer
             # - grouped: answers aggregated by type
             # Default: all
-            #formats: [detailed, grouped]
+            formats: [detailed, grouped]
 
             # Answer types to log.
             # Default: all
@@ -195,16 +195,16 @@ outputs:
             # in eve-log
             #custom: [subject, issuer, session_resumed, serial, fingerprint, sni, version, not_before, not_after, certificate, chain, ja3]
         - files:
-            force-magic: no   # force logging magic on all logged files
+            force-magic: yes   # force logging magic on all logged files
             # force logging of checksums, available hash functions are md5,
             # sha1 and sha256
-            #force-hash: [md5]
-        #- drop:
-        #    alerts: yes      # log alerts that caused drops
-        #    flows: all       # start or all: 'start' logs only a single drop
-        #                     # per flow direction. All logs each dropped pkt.
+            force-hash: [md5,sha1,sha256]
+        - drop:
+            alerts: yes      # log alerts that caused drops
+            flows: all       # start or all: 'start' logs only a single drop
+                             # per flow direction. All logs each dropped pkt.
         - smtp:
-            #extended: yes # enable this for extended logging information
+            extended: yes # enable this for extended logging information
             # this includes: bcc, message-id, subject, x_mailer, user-agent
             # custom fields logging from the list:
             #  reply-to, bcc, message-id, subject, x-mailer, user-agent, received,
@@ -214,9 +214,9 @@ outputs:
             # output md5 of fields: body, subject
             # for the body you need to set app-layer.protocols.smtp.mime.body-md5
             # to yes
-            #md5: [body, subject]
+            md5: [body, subject]
 
-        #- dnp3
+        - dnp3
         - nfs
         - smb
         - tftp
@@ -229,21 +229,21 @@ outputs:
             # with full detail. When extended mode is off (the
             # default), just enough information to map a MAC address
             # to an IP address is logged.
-            extended: no
+            extended: yes
         - ssh
         - stats:
             totals: yes       # stats for all threads merged together
-            threads: no       # per thread stats
-            deltas: no        # include delta values
+            threads: yes       # per thread stats
+            deltas: yes        # include delta values
         # bi-directional flows
         - flow
         # uni-directional flows
-        #- netflow
+        - netflow
 
         # Metadata event type. Triggered whenever a pktvar is saved
         # and will include the pktvars, flowvars, flowbits and
         # flowints.
-        #- metadata
+        - metadata
 
   # alert output for use with Barnyard2
   - unified2-alert:
@@ -445,7 +445,7 @@ outputs:
   # prune" command which can delete files over a certain age.
   - file-store:
       version: 2
-      enabled: no
+      enabled: yes
 
       # Set the directory for the filestore. If the path is not
       # absolute will be be relative to the default-log-dir.
@@ -454,14 +454,14 @@ outputs:
       # Write out a fileinfo record for each occurrence of a
       # file. Disabled by default as each occurrence is already logged
       # as a fileinfo record to the main eve-log.
-      #write-fileinfo: yes
+      write-fileinfo: yes
 
       # Force storing of all files. Default: no.
-      #force-filestore: yes
+      force-filestore: yes
 
       # Override the global stream-depth for sessions in which we want
       # to perform file extraction. Set to 0 for unlimited.
-      #stream-depth: 0
+      stream-depth: 0
 
       # Uncomment the following variable to define how many files can
       # remain open for filestore by Suricata. Default value is 0 which
@@ -472,7 +472,7 @@ outputs:
       # sha1 and sha256. Note that SHA256 is automatically forced by
       # the use of this output module as it uses the SHA256 as the
       # file naming scheme.
-      #force-hash: [sha1, md5]
+      force-hash: [sha1, md5, sha256]
       # NOTE: X-Forwarded configuration is ignored if write-fileinfo is disabled
       # HTTP X-Forwarded-For support by adding an extra field or overwriting
       # the source or destination IP address (depending on flow direction)
@@ -480,7 +480,7 @@ outputs:
       # helpful when reviewing alerts for traffic that is being reverse
       # or forward proxied.
       xff:
-        enabled: no
+        enabled: yes
         # Two operation modes are available, "extra-data" and "overwrite".
         mode: extra-data
         # Two proxy deployments are supported, "reverse" and "forward". In
@@ -776,7 +776,7 @@ app-layer:
         dp: 443
 
       # Generate JA3 fingerprint from client hello
-      ja3-fingerprints: no
+      ja3-fingerprints: yes
 
       # What to do when the encrypted communications start:
       # - default: keep tracking TLS session, check for protocol anomalies,
@@ -790,7 +790,7 @@ app-layer:
       #
       # For best performance, select 'bypass'.
       #
-      #encrypt-handling: default
+      encrypt-handling: full
 
     dcerpc:
       enabled: yes
@@ -821,16 +821,16 @@ app-layer:
         extract-urls: yes
         # Set to yes to compute the md5 of the mail body. You will then
         # be able to journalize it.
-        body-md5: no
+        body-md5: yes
       # Configure inspected-tracker for file_data keyword
       inspected-tracker:
         content-limit: 100000
         content-inspect-min-size: 32768
         content-inspect-window: 4096
     imap:
-      enabled: detection-only
+      enabled: yes
     msn:
-      enabled: detection-only
+      enabled: yes
     # Note: --enable-rust is required for full SMB1/2 support. W/o rust
     # only minimal SMB1 support is available.
     smb:
@@ -955,8 +955,8 @@ app-layer:
            #randomize-inspection-range: 10
 
            # decoding
-           double-decode-path: no
-           double-decode-query: no
+           double-decode-path: yes
+           double-decode-query: yes
 
          server-config:
 
@@ -992,7 +992,7 @@ app-layer:
       # If the limit is reached, app-layer-event:modbus.flooded; will match.
       #request-flood: 500
 
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 502
       # According to MODBUS Messaging on TCP/IP Implementation Guide V1.0b, it
@@ -1006,13 +1006,13 @@ app-layer:
 
     # DNP3
     dnp3:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 20000
 
     # SCADA EtherNet/IP and CIP protocol support
     enip:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 44818
         sp: 44818
@@ -1857,66 +1857,27 @@ mpipe:
 ## installed with Suricata.
 ##
 
-default-rule-path: /rules
+default-rule-path: /rules/
 
 rule-files:
- - botcc.rules
- # - botcc.portgrouped.rules
- - ciarmy.rules
- - compromised.rules
- - drop.rules
- - dshield.rules
-# - emerging-activex.rules
- - emerging-attack_response.rules
- - emerging-chat.rules
- - emerging-current_events.rules
- - emerging-dns.rules
- - emerging-dos.rules
- - emerging-exploit.rules
- - emerging-ftp.rules
-# - emerging-games.rules
-# - emerging-icmp_info.rules
-# - emerging-icmp.rules
- - emerging-imap.rules
-# - emerging-inappropriate.rules
-# - emerging-info.rules
- - emerging-malware.rules
- - emerging-misc.rules
- - emerging-mobile_malware.rules
- - emerging-netbios.rules
- - emerging-p2p.rules
- - emerging-policy.rules
- - emerging-pop3.rules
- - emerging-rpc.rules
-# - emerging-scada.rules
-# - emerging-scada_special.rules
- - emerging-scan.rules
-# - emerging-shellcode.rules
- - emerging-smtp.rules
- - emerging-snmp.rules
- - emerging-sql.rules
- - emerging-telnet.rules
- - emerging-tftp.rules
- - emerging-trojan.rules
- - emerging-user_agents.rules
- - emerging-voip.rules
- - emerging-web_client.rules
- - emerging-web_server.rules
-# - emerging-web_specific_apps.rules
- - emerging-worm.rules
- - tor.rules
-# - decoder-events.rules # available in suricata sources under rules dir
-# - stream-events.rules  # available in suricata sources under rules dir
+# - 2.0-emerging-all.rules
+ - 4.0-emerging-all.rules
+ - all.rules
+ - files.rules
+ - decoder-events.rules # available in suricata sources under rules dir
+ - stream-events.rules  # available in suricata sources under rules dir
  - http-events.rules    # available in suricata sources under rules dir
  - smtp-events.rules    # available in suricata sources under rules dir
  - dns-events.rules     # available in suricata sources under rules dir
  - tls-events.rules     # available in suricata sources under rules dir
-# - modbus-events.rules  # available in suricata sources under rules dir
-# - app-layer-events.rules  # available in suricata sources under rules dir
-# - dnp3-events.rules       # available in suricata sources under rules dir
-# - ntp-events.rules       # available in suricata sources under rules dir
-# - ipsec-events.rules       # available in suricata sources under rules dir
-# - kerberos-events.rules       # available in suricata sources under rules dir
+ - modbus-events.rules  # available in suricata sources under rules dir
+ - app-layer-events.rules  # available in suricata sources under rules dir
+ - dnp3-events.rules       # available in suricata sources under rules dir
+ - ntp-events.rules       # available in suricata sources under rules dir
+ - ipsec-events.rules       # available in suricata sources under rules dir
+ - kerberos-events.rules       # available in suricata sources under rules dir
+ - nfs-events.rules
+ - smb-events.rules
 
 ##
 ## Auxiliary configuration files.
