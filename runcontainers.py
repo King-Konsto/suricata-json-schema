@@ -70,6 +70,7 @@ def stop_containers(*args):
         logging.info("stopping %s", c)
         try:
             c.stop()
+            c.remove()
         except docker.errors.NotFound:
             pass
     for t in threads:
