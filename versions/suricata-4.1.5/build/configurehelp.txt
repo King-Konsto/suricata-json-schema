@@ -119,6 +119,7 @@ Optional Features:
   --enable-lua            Enable Lua support
   --enable-luajit         Enable Luajit support
   --enable-geoip          Enable GeoIP support
+  --disable-libgeoip      Disable libgeoip support
   --enable-pie            Enable compiling as a position independent
                           executable
   --enable-hiredis        Enable Redis support
@@ -188,6 +189,8 @@ Optional Packages:
   --with-libluajit-libraries=DIR    libluajit library directory
   --with-libgeoip-includes=DIR  libgeoip include directory
   --with-libgeoip-libraries=DIR    libgeoip library directory
+  --with-libmaxminddb-includes=DIR  libmaxminddb include directory
+  --with-libmaxminddb-libraries=DIR    libmaxminddb library directory
   --with-libevent-includes=DIR  libevent include directory
   --with-libevent-libraries=DIR    libevent library directory
   --with-libhiredis-includes=DIR  libhiredis include directory
