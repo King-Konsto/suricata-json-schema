@@ -3,6 +3,9 @@
 # For storing files make sure you enable the "file" output.
 # Also, make sure you read the comments that go with it in the suricata.yaml file.
 
+alert http any any -> any any (msg:"FOO FILESTORE HTTP"; filestore; sid:123;)
+alert smtp any any -> any any (msg:"FOO FILESTORE SMTP"; filestore; sid:124;)
+
 # Alert on files with jpg or bmp extensions
 alert http any any -> any any (msg:"FILEEXT JPG file claimed"; fileext:"jpg"; sid:1; rev:1;)
 alert http any any -> any any (msg:"FILEEXT BMP file claimed"; fileext:"bmp"; sid:3; rev:1;)
