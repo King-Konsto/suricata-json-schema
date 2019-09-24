@@ -55,14 +55,49 @@ for f in files:
         #print("Unexpected error:", inst)
         pass
 
-# Render skeleton page to file
+# merge deltas
+cleaned = []
+for k, v in fields.items():
+    if "_delta" in k:
+        nonDelta = k.replace("_delta", "")
+        if nonDelta in fields:
+            fields[nonDelta]["has_delta"] = True
+            cleaned.append(k)
+for c in cleaned:
+    del fields[c]
+
+
 templateLoader = jinja2.FileSystemLoader(searchpath="./")
 templateEnv = jinja2.Environment(loader=templateLoader)
 template = templateEnv.get_template("field_details.rst.j2")
+idxTemplate = templateEnv.get_template("index.rst.j2")
+subidxTemplate = templateEnv.get_template("subindex.rst.j2")
+
+toplevelPages = {}
+lonePages = []
 for k, v in fields.items():
+    components = k.split(".")
+    if len(components) > 1:
+        if components[0] not in toplevelPages:
+            toplevelPages[components[0]] = []
+        toplevelPages[components[0]].append(k)
+    else:
+        lonePages.append(k)
     with open("output/%s.rst" % k, "w") as f:
         f.write(template.render(field_name=k,
+                                field_line=('=' * len(k)),
                                 field_type=v["type"],
                                 field_first_seen_ver=v["first_version"],
                                 field_last_seen_ver=v["last_version"],
+                                has_delta=("has_delta" in v),
                                 date_generated=datetime.datetime.now()))
+
+with open("output/index.rst", "w") as f:
+    tops = list(toplevelPages.keys())
+    all = tops + lonePages
+    f.write(idxTemplate.render(toplevel_items=sorted(all)))
+
+for k, v in toplevelPages.items():
+    with open("output/%s.rst" % k, "w") as f:
+        f.write(subidxTemplate.render(title=k,
+                                      items=sorted(v)))

@@ -1,6 +1,6 @@
-=====================================================
- {{ field_name }}
-=====================================================
+{{ field_line }}
+{{ field_name }}
+{{ field_line }}
 :Type: {{ field_type }}
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: {{ field_first_seen_ver}}
@@ -10,8 +10,9 @@
 .. meta::
    :keywords: {{ field_type }}
 
-Description
-===========
+.. raw:: html
+
+   <h2>Description</h2>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -20,14 +21,24 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum.
 
-Example
-=======
+.. raw:: html
+
+   <h2>Example</h2>
 
 .. code-block:: json
    :linenos:
 
    {
-       "timestamp":"2016-05-27T21:51:40.565045+0000".
+       "timestamp": "2016-05-27T21:51:40.565045+0000",
        "event_type": "foobar",
-       "flow_id":1918431989874897
+       "flow_id": 1918431989874897
    }
+
+{% if has_delta %}
+.. raw:: html
+
+   <h2>{{ field_name}}_delta</h2>
+
+This counter is also available as ``{{ field_name }}_delta`` which provides an incremental
+(delta) value.
+{% endif %}
