@@ -12,8 +12,8 @@ RUN pip3 install genson
 
 ARG suricata_version="suricata-4.1.4"
 
-COPY build/build-${suricata_version}.sh /usr/local/bin/build.sh
+COPY versions/suricata-${suricata_version}/build/build-suricata-${suricata_version}.sh /usr/local/bin/build.sh
 
 RUN /usr/local/bin/build.sh
 
-COPY configs/${suricata_version}.yaml /etc/suricata/suricata.yaml
+COPY versions/suricata-${suricata_version}/configs/suricata.yaml /etc/suricata/suricata.yaml
