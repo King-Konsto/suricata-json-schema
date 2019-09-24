@@ -1,14 +1,14 @@
 ====
 vlan
 ====
-:Type: {'anyOf': [{'type': 'integer'}, {'type': 'array', 'items': {'type': 'integer'}}]}
+:Type: {'anyOf': [{'type': 'integer'}, {'items': {'type': 'integer'}, 'type': 'array'}]}
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 2.0.5
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 13:42:00.841345 $
+:Date Generated: $Date: 2019-09-24 14:18:07.356801 $
 
 .. meta::
-   :keywords: {'anyOf': [{'type': 'integer'}, {'type': 'array', 'items': {'type': 'integer'}}]}
+   :keywords: {'anyOf': [{'type': 'integer'}, {'items': {'type': 'integer'}, 'type': 'array'}]}
 
 .. raw:: html
 
@@ -33,3 +33,4 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+

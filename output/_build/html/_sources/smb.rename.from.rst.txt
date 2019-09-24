@@ -5,7 +5,7 @@ smb.rename.from
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.0
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 13:42:00.844648 $
+:Date Generated: $Date: 2019-09-24 14:18:07.327953 $
 
 .. meta::
    :keywords: string
@@ -33,3 +33,4 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+

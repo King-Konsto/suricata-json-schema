@@ -5,7 +5,7 @@ vars.flowbits.ET.EOT.Download
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.0.0
 :Latest supported Suricata release: 4.0.7
-:Date Generated: $Date: 2019-09-24 13:42:00.870158 $
+:Date Generated: $Date: 2019-09-24 14:18:07.349005 $
 
 .. meta::
    :keywords: boolean
@@ -33,3 +33,4 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+

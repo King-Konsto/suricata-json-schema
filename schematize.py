@@ -55,6 +55,18 @@ for f in files:
         #print("Unexpected error:", inst)
         pass
 
+# merge deltas
+cleaned = []
+for k, v in fields.items():
+    if "_delta" in k:
+        nonDelta = k.replace("_delta", "")
+        if nonDelta in fields:
+            fields[nonDelta]["has_delta"] = True
+            cleaned.append(k)
+for c in cleaned:
+    del fields[c]
+
+
 templateLoader = jinja2.FileSystemLoader(searchpath="./")
 templateEnv = jinja2.Environment(loader=templateLoader)
 template = templateEnv.get_template("field_details.rst.j2")
@@ -77,6 +89,7 @@ for k, v in fields.items():
                                 field_type=v["type"],
                                 field_first_seen_ver=v["first_version"],
                                 field_last_seen_ver=v["last_version"],
+                                has_delta=("has_delta" in v),
                                 date_generated=datetime.datetime.now()))
 
 with open("output/index.rst", "w") as f:

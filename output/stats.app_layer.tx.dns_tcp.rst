@@ -5,7 +5,7 @@ stats.app_layer.tx.dns_tcp
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 3.2
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 13:42:00.838322 $
+:Date Generated: $Date: 2019-09-24 14:18:07.358926 $
 
 .. meta::
    :keywords: integer
@@ -33,3 +33,11 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+
+
+.. raw:: html
+
+   <h2>stats.app_layer.tx.dns_tcp_delta</h2>
+
+This counter is also available as ``stats.app_layer.tx.dns_tcp_delta`` which provides an incremental
+(delta) value.

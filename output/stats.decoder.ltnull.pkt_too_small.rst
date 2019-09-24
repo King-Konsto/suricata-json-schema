@@ -5,7 +5,7 @@ stats.decoder.ltnull.pkt_too_small
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 3.0.1
 :Latest supported Suricata release: 4.1.2
-:Date Generated: $Date: 2019-09-24 13:42:00.857106 $
+:Date Generated: $Date: 2019-09-24 14:18:07.331016 $
 
 .. meta::
    :keywords: integer
@@ -33,3 +33,11 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+
+
+.. raw:: html
+
+   <h2>stats.decoder.ltnull.pkt_too_small_delta</h2>
+
+This counter is also available as ``stats.decoder.ltnull.pkt_too_small_delta`` which provides an incremental
+(delta) value.

@@ -33,3 +33,12 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+
+{% if has_delta %}
+.. raw:: html
+
+   <h2>{{ field_name}}_delta</h2>
+
+This counter is also available as ``{{ field_name }}_delta`` which provides an incremental
+(delta) value.
+{% endif %}

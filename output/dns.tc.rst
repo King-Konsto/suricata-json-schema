@@ -5,7 +5,7 @@ dns.tc
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.0
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 13:42:00.875146 $
+:Date Generated: $Date: 2019-09-24 14:18:07.338500 $
 
 .. meta::
    :keywords: boolean
@@ -33,3 +33,4 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+

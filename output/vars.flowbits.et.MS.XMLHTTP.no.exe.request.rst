@@ -5,7 +5,7 @@ vars.flowbits.et.MS.XMLHTTP.no.exe.request
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.0.0
 :Latest supported Suricata release: 4.0.7
-:Date Generated: $Date: 2019-09-24 13:42:00.821180 $
+:Date Generated: $Date: 2019-09-24 14:18:07.360158 $
 
 .. meta::
    :keywords: boolean
@@ -33,3 +33,4 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+

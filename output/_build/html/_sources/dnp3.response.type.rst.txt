@@ -5,7 +5,7 @@ dnp3.response.type
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 3.2
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 13:42:00.865103 $
+:Date Generated: $Date: 2019-09-24 14:18:07.351711 $
 
 .. meta::
    :keywords: string
@@ -33,3 +33,4 @@ culpa qui officia deserunt mollit anim id est laborum.
        "event_type": "foobar",
        "flow_id": 1918431989874897
    }
+
