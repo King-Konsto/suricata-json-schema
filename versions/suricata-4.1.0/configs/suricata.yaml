@@ -1862,7 +1862,7 @@ rule-files:
 # - 2.0-emerging-all.rules
  - 4.0-emerging-all.rules
  - all.rules
- - files.rules
+ - 4.0-files.rules
  - decoder-events.rules # available in suricata sources under rules dir
  - stream-events.rules  # available in suricata sources under rules dir
  - http-events.rules    # available in suricata sources under rules dir
