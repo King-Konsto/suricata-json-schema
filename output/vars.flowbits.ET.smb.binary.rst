@@ -5,7 +5,7 @@ vars.flowbits.ET.smb.binary
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.0.0
 :Latest supported Suricata release: 4.0.7
-:Date Generated: $Date: 2019-09-24 14:18:07.350044 $
+:Date Generated: $Date: 2019-09-26 14:11:58.309920 $
 
 .. meta::
    :keywords: boolean

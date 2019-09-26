@@ -5,7 +5,7 @@ stats.decoder.event.gre.version0_malformed_sre_hdr
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.354066 $
+:Date Generated: $Date: 2019-09-26 14:11:58.312568 $
 
 .. meta::
    :keywords: integer

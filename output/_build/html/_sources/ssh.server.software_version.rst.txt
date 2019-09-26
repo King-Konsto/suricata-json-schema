@@ -3,9 +3,9 @@ ssh.server.software_version
 ===========================
 :Type: string
 :Associated with event type(s): FILLMEIN
-:First supported Suricata release: 2.0.5
+:First supported Suricata release: 2.0
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.352353 $
+:Date Generated: $Date: 2019-09-26 14:11:58.292968 $
 
 .. meta::
    :keywords: string

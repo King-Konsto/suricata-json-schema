@@ -5,7 +5,7 @@ stats.decoder.event.ipv4.opt_malformed
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.357563 $
+:Date Generated: $Date: 2019-09-26 14:11:58.318342 $
 
 .. meta::
    :keywords: integer

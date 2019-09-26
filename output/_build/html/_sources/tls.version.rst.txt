@@ -5,7 +5,7 @@ tls.version
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 2.0
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.345998 $
+:Date Generated: $Date: 2019-09-26 14:11:58.297248 $
 
 .. meta::
    :keywords: string

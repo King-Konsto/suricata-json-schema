@@ -5,7 +5,7 @@ stats.decoder.event.ipv4.opt_eol_required
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.350491 $
+:Date Generated: $Date: 2019-09-26 14:11:58.308066 $
 
 .. meta::
    :keywords: integer

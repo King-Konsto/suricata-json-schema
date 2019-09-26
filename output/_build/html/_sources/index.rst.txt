@@ -48,6 +48,8 @@
 
    icmp_type
 
+   in_iface
+
    krb5
 
    metadata

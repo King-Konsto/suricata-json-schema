@@ -5,7 +5,7 @@ http.http_user_agent
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 2.0
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.348365 $
+:Date Generated: $Date: 2019-09-26 14:11:58.322445 $
 
 .. meta::
    :keywords: string

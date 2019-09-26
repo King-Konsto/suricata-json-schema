@@ -5,7 +5,7 @@ stats.decoder.event.icmpv4.ipv4_trunc_pkt
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.352415 $
+:Date Generated: $Date: 2019-09-26 14:11:58.322748 $
 
 .. meta::
    :keywords: integer
