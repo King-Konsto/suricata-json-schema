@@ -5,7 +5,7 @@ stats.decoder.event.ppp.ip4_pkt_too_small
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.366613 $
+:Date Generated: $Date: 2019-09-26 14:11:58.328029 $
 
 .. meta::
    :keywords: integer

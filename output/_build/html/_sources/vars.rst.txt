@@ -6,6 +6,8 @@
    :maxdepth: 2
 
 
+   vars.flowbits
+
    vars.flowbits.ET.EOT.Download
 
    vars.flowbits.ET.HB.Request.SI
@@ -45,6 +47,8 @@
    vars.flowbits.ms.rdp.synack
 
    vars.flowbits.tcp.retransmission.alerted
+
+   vars.flowints
 
    vars.flowints.applayer.anomaly.count
 

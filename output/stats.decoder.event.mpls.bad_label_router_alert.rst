@@ -5,7 +5,7 @@ stats.decoder.event.mpls.bad_label_router_alert
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.337151 $
+:Date Generated: $Date: 2019-09-26 14:11:58.319582 $
 
 .. meta::
    :keywords: integer

@@ -5,7 +5,7 @@ stats.decoder.event.mpls.bad_label_reserved
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.330446 $
+:Date Generated: $Date: 2019-09-26 14:11:58.319274 $
 
 .. meta::
    :keywords: integer

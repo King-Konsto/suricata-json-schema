@@ -5,7 +5,7 @@ stats.decoder.event.pppoe.malformed_tags
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.350363 $
+:Date Generated: $Date: 2019-09-26 14:11:58.299457 $
 
 .. meta::
    :keywords: integer

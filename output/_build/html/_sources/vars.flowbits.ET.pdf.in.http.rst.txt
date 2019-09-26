@@ -5,7 +5,7 @@ vars.flowbits.ET.pdf.in.http
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.0.0
 :Latest supported Suricata release: 4.0.7
-:Date Generated: $Date: 2019-09-24 14:18:07.334599 $
+:Date Generated: $Date: 2019-09-26 14:11:58.306569 $
 
 .. meta::
    :keywords: boolean

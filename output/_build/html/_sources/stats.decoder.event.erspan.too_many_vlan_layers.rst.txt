@@ -5,7 +5,7 @@ stats.decoder.event.erspan.too_many_vlan_layers
 :Associated with event type(s): FILLMEIN
 :First supported Suricata release: 4.1.3
 :Latest supported Suricata release: 4.1.4
-:Date Generated: $Date: 2019-09-24 14:18:07.337275 $
+:Date Generated: $Date: 2019-09-26 14:11:58.297309 $
 
 .. meta::
    :keywords: integer
