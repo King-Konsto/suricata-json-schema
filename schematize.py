@@ -70,6 +70,7 @@ for c in cleaned:
 templateLoader = jinja2.FileSystemLoader(searchpath="./")
 templateEnv = jinja2.Environment(loader=templateLoader)
 template = templateEnv.get_template("field_details.rst.j2")
+cntTemplate = templateEnv.get_template("field_content.rst.j2")
 idxTemplate = templateEnv.get_template("index.rst.j2")
 subidxTemplate = templateEnv.get_template("subindex.rst.j2")
 
@@ -91,6 +92,14 @@ for k, v in fields.items():
                                 field_last_seen_ver=v["last_version"],
                                 has_delta=("has_delta" in v),
                                 date_generated=datetime.datetime.now()))
+    if not os.path.isfile("output/%s_content.rst.inc" % k):
+        with open("output/%s_content.rst.inc" % k, "w") as f:
+            f.write(cntTemplate.render(field_name=k,
+                                    field_type=v["type"],
+                                    field_first_seen_ver=v["first_version"],
+                                    field_last_seen_ver=v["last_version"],
+                                    has_delta=("has_delta" in v),
+                                    date_generated=datetime.datetime.now()))
 
 with open("output/index.rst", "w") as f:
     tops = list(toplevelPages.keys())
