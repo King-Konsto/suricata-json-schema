@@ -7,8 +7,6 @@ flow.emergency
 
    * - Type
      - boolean
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.0
    * - Latest supported Suricata release

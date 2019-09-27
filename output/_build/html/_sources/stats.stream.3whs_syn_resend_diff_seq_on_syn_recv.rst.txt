@@ -7,8 +7,6 @@ stats.stream.3whs_syn_resend_diff_seq_on_syn_recv
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.0
    * - Latest supported Suricata release

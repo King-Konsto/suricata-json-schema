@@ -7,8 +7,6 @@ stats.decoder.event.gre.version1_recur
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

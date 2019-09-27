@@ -7,8 +7,6 @@ stats.stream.4whs_wrong_seq
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.0
    * - Latest supported Suricata release

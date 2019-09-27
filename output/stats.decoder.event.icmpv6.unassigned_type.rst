@@ -7,8 +7,6 @@ stats.decoder.event.icmpv6.unassigned_type
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

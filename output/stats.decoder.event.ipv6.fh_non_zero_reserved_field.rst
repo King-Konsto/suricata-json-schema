@@ -7,8 +7,6 @@ stats.decoder.event.ipv6.fh_non_zero_reserved_field
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

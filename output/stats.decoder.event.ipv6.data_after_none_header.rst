@@ -7,8 +7,6 @@ stats.decoder.event.ipv6.data_after_none_header
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

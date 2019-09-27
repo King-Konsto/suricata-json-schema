@@ -7,8 +7,6 @@ stats.decoder.event.ipv4.frag_overlap
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

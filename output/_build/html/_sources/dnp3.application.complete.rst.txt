@@ -7,8 +7,6 @@ dnp3.application.complete
 
    * - Type
      - boolean
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.2
    * - Latest supported Suricata release

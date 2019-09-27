@@ -7,8 +7,6 @@ stats.app_layer.flow.ftp
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.2
    * - Latest supported Suricata release

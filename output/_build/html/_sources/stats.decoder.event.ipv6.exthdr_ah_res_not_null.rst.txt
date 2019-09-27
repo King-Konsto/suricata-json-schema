@@ -7,8 +7,6 @@ stats.decoder.event.ipv6.exthdr_ah_res_not_null
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

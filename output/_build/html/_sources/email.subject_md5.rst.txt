@@ -7,8 +7,6 @@ email.subject_md5
 
    * - Type
      - string
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.0
    * - Latest supported Suricata release

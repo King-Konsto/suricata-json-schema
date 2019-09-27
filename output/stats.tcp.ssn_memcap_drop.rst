@@ -7,8 +7,6 @@ stats.tcp.ssn_memcap_drop
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.0
    * - Latest supported Suricata release

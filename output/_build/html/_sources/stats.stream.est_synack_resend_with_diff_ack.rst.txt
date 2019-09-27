@@ -7,8 +7,6 @@ stats.stream.est_synack_resend_with_diff_ack
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.0
    * - Latest supported Suricata release

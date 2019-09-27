@@ -7,8 +7,6 @@ stats.decoder.event.icmpv4.ipv4_unknown_ver
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

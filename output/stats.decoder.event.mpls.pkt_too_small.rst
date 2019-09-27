@@ -7,8 +7,6 @@ stats.decoder.event.mpls.pkt_too_small
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.4
    * - Latest supported Suricata release

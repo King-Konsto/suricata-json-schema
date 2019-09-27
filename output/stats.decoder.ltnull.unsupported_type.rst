@@ -7,8 +7,6 @@ stats.decoder.ltnull.unsupported_type
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.0.1
    * - Latest supported Suricata release

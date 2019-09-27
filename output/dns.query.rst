@@ -7,8 +7,6 @@ dns.query
 
    * - Type
      - array
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

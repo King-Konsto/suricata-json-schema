@@ -7,8 +7,6 @@ stats.decoder.ieee8021ah
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.0.2
    * - Latest supported Suricata release

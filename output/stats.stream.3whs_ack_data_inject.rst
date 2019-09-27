@@ -7,8 +7,6 @@ stats.stream.3whs_ack_data_inject
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.0
    * - Latest supported Suricata release

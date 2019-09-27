@@ -7,8 +7,6 @@ packet_info.linktype
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.1.2
    * - Latest supported Suricata release

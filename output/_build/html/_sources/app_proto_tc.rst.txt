@@ -7,8 +7,6 @@ app_proto_tc
 
    * - Type
      - string
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 3.2
    * - Latest supported Suricata release

@@ -6,9 +6,7 @@ vlan
    :widths: 30 50
 
    * - Type
-     - {'anyOf': [{'type': 'integer'}, {'type': 'array', 'items': {'type': 'integer'}}]}
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
+     - {'anyOf': [{'type': 'integer'}, {'items': {'type': 'integer'}, 'type': 'array'}]}
    * - First supported Suricata release
      - 2.0
    * - Latest supported Suricata release
@@ -17,7 +15,7 @@ vlan
      - |today|
    
 .. meta::
-   :keywords: {'anyOf': [{'type': 'integer'}, {'type': 'array', 'items': {'type': 'integer'}}]}
+   :keywords: {'anyOf': [{'type': 'integer'}, {'items': {'type': 'integer'}, 'type': 'array'}]}
 
 .. include:: vlan_content.rst.inc
 

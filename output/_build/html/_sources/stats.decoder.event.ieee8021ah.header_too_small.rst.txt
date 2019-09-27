@@ -7,8 +7,6 @@ stats.decoder.event.ieee8021ah.header_too_small
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release

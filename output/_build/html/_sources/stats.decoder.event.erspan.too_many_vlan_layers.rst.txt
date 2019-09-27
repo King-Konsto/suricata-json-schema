@@ -7,8 +7,6 @@ stats.decoder.event.erspan.too_many_vlan_layers
 
    * - Type
      - integer
-   * - Associated with event type(s)
-     - ``FILLMEIN`` 
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release
