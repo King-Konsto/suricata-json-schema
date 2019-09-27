@@ -25,10 +25,11 @@ pcaps:
 	   && find $(PCAP_DIR)/zeek-master -name '*.pcap' | xargs mv -S _ --backup=numbered -ft $(PCAP_DIR) \
 	   && rm master.zip \
 	   && rm -rf zeek-master
-	find $(PCAP_DIR) -name '*.pcap.gz' -exec gunzip {} \;
+	find $(PCAP_DIR) -name '*.gz' -exec gunzip {} \;
+	find $(PCAP_DIR) -name '*.bz2' -exec bunzip2 {} \;
 	find $(PCAP_DIR) -name '*.pcapng' -exec editcap -F libpcap {} {}.pcap \;
 	find $(PCAP_DIR) -name '*.pcapng' -delete
-	chmod -R 0755 $(PCAP_DIR)
+	chmod -R 0644 $(PCAP_DIR)
 
 clean:
 	rm -rf pcaps/

@@ -1,2 +1,4 @@
 docker
 Jinja2
+bs4
+lxml
