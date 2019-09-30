@@ -56,7 +56,7 @@ The above configuration snippet is valid for Suricata versions 4.1.0 - 5.0.0.
     "payload": "",
     "payload_printable": "",
     "stream": 0,
-    "packet": "ZGazC4+CaKhtGGkOCABFAABAZAAAgQFtAEDAwQBAQgKGyWltgAAAAAEAgAA",
+    "packet": "<truncated>",
     "packet_info": {
       "linktype": 1
     },
