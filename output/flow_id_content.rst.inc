@@ -68,7 +68,7 @@ This field contains a unique identifier (ID) for the flow this event is based on
     "payload": "",
     "payload_printable": "",
     "stream": 0,
-    "packet": "ZGazC4+CaKhtGGkOCABFAABAZAAAgQFtAEDAwQBAQgKGyWltgAAAAAEAgAA",
+    "packet": "<truncated>",
     "packet_info": {
       "linktype": 1
     },
