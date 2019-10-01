@@ -10,4 +10,5 @@ git clone https://github.com/OISF/libhtp.git
 ./configure --enable-hiredis --enable-geoip --enable-luajit --prefix=/usr/ --sysconfdir=/etc/ --localstatedir=/var/
 make install
 make install-conf
+cp /usr/lib/libhtp.so.2.0.0 /usr/lib/x86_64-linux-gnu/libhtp.so.2
 ldconfig
