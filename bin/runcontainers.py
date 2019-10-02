@@ -4,7 +4,7 @@ import docker
 import logging
 import threading
 import os
-from signal import *
+from signal import SIGABRT, SIGILL, SIGINT, SIGSEGV, SIGTERM, signal
 import sys
 import time
 
