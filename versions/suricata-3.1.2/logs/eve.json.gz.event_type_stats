@@ -1,0 +1,11 @@
+3332071 "alert"
+ 106301 "dns"
+  16677 "fileinfo"
+1134274 "flow"
+  18893 "http"
+2268548 "netflow"
+ 243694 null
+      9 "smtp"
+    329 "ssh"
+    810 "stats"
+   1423 "tls"
