@@ -1,4 +1,5 @@
-    429 "dns"
-    703 "http"
-  24804 null
-     36 "tls"
+    714 "dns"
+    866 "http"
+  25345 null
+      3 "smb"
+     78 "tls"
