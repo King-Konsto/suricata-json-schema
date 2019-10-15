@@ -19,6 +19,7 @@ def process_level(fields, k1, v1, version):
     else:
         if not (version in fields):
             fields[version] = {}
+        #print("####", k1)
         items = k1.split('.')
         if len(items) == 1:
             kk = "toplevel"
@@ -66,16 +67,15 @@ for _, v in fields.items():
         topLevel.add(k)
 
 print("version", end ="")
-for tl in topLevel:
+for tl in sorted(topLevel):
     print(",%s" % tl, end ="")
 print()
 
 versions = sorted(fields.keys(), key=sort_ver)
 
-
 for version in versions:
     print(version, end ="")
-    for tl in topLevel:
+    for tl in sorted(topLevel):
         if tl in fields[version]:
             print(",%d"% fields[version][tl], end ="")
         else:
