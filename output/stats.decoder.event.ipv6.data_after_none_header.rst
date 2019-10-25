@@ -10,7 +10,7 @@ stats.decoder.event.ipv6.data_after_none_header
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

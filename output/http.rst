@@ -6,6 +6,14 @@
    :maxdepth: 2
 
 
+   http.content_range.end
+
+   http.content_range.raw
+
+   http.content_range.size
+
+   http.content_range.start
+
    http.hostname
 
    http.http_content_type
@@ -31,6 +39,10 @@
    http.protocol
 
    http.redirect
+
+   http.request_headers
+
+   http.response_headers
 
    http.status
 

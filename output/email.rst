@@ -10,6 +10,8 @@
 
    email.body_md5
 
+   email.cc
+
    email.from
 
    email.status

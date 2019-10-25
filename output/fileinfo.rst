@@ -6,6 +6,8 @@
    :maxdepth: 2
 
 
+   fileinfo.end
+
    fileinfo.file_id
 
    fileinfo.filename
@@ -20,7 +22,11 @@
 
    fileinfo.sha256
 
+   fileinfo.sid
+
    fileinfo.size
+
+   fileinfo.start
 
    fileinfo.state
 

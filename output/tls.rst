@@ -16,6 +16,10 @@
 
    tls.ja3.string
 
+   tls.ja3s.hash
+
+   tls.ja3s.string
+
    tls.notafter
 
    tls.notbefore

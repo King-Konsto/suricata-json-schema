@@ -10,7 +10,7 @@ stats.stream.4whs_synack_with_wrong_syn
    * - First supported Suricata release
      - 4.1.0
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

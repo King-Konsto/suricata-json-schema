@@ -52,9 +52,15 @@
 
    stats.app_layer.flow.ntp
 
+   stats.app_layer.flow.rdp
+
+   stats.app_layer.flow.sip
+
    stats.app_layer.flow.smb
 
    stats.app_layer.flow.smtp
+
+   stats.app_layer.flow.snmp
 
    stats.app_layer.flow.ssh
 
@@ -86,11 +92,15 @@
 
    stats.app_layer.tx.ikev2
 
+   stats.app_layer.tx.imap
+
    stats.app_layer.tx.krb5_tcp
 
    stats.app_layer.tx.krb5_udp
 
    stats.app_layer.tx.modbus
+
+   stats.app_layer.tx.msn
 
    stats.app_layer.tx.nfs_tcp
 
@@ -98,9 +108,15 @@
 
    stats.app_layer.tx.ntp
 
+   stats.app_layer.tx.rdp
+
+   stats.app_layer.tx.sip
+
    stats.app_layer.tx.smb
 
    stats.app_layer.tx.smtp
+
+   stats.app_layer.tx.snmp
 
    stats.app_layer.tx.ssh
 
@@ -390,6 +406,8 @@
 
    stats.decoder.vlan_qinq
 
+   stats.decoder.vxlan
+
    stats.defrag.ipv4.fragments
 
    stats.defrag.ipv4.reassembled
@@ -439,6 +457,20 @@
    stats.flow.tcp_reuse
 
    stats.flow.udp
+
+   stats.flow_bypassed.bytes
+
+   stats.flow_bypassed.closed
+
+   stats.flow_bypassed.local_bytes
+
+   stats.flow_bypassed.local_capture_bytes
+
+   stats.flow_bypassed.local_capture_pkts
+
+   stats.flow_bypassed.local_pkts
+
+   stats.flow_bypassed.pkts
 
    stats.flow_mgr.bypassed_pruned
 

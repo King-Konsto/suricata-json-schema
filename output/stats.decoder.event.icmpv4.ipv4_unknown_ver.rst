@@ -10,7 +10,7 @@ stats.decoder.event.icmpv4.ipv4_unknown_ver
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

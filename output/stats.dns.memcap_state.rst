@@ -10,7 +10,7 @@ stats.dns.memcap_state
    * - First supported Suricata release
      - 3.0
    * - Latest supported Suricata release
-     - 4.1.4
+     - 4.1.5
    * - Date Generated
      - |today|
    

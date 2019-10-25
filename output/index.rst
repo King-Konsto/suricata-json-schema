@@ -8,6 +8,8 @@
 
    alert
 
+   anomaly
+
    app_proto
 
    app_proto_expected
@@ -30,6 +32,8 @@
 
    dns
 
+   drop
+
    email
 
    event_type
@@ -40,6 +44,8 @@
 
    flow_id
 
+   ftp
+
    ftp-data
 
    http
@@ -47,6 +53,8 @@
    icmp_code
 
    icmp_type
+
+   ikev2
 
    in_iface
 
@@ -74,15 +82,21 @@
 
    proto
 
+   rdp
+
    response_icmp_code
 
    response_icmp_type
 
    rpc
 
+   sip
+
    smb
 
    smtp
+
+   snmp
 
    src_ip
 
