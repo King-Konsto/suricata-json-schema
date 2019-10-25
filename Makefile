@@ -20,7 +20,7 @@ pcaps:
 	#cd $(PCAP_DIR) && wget -nd -P . -r -l 2 --no-parent -A '*.pcap.gz' 'https://download.netresec.com/pcap/'
 	#cd $(PCAP_DIR) && wget --no-check-certificate -nd -P . -r -l 3 --no-parent -A '*.pcap' 'https://mcfp.felk.cvut.cz/publicDatasets/'
 	cd $(PCAP_DIR) && python $(BIN_DIR)/scrape_ws.py
-	cp $(PCAP_DIST_DIR)/.*pcap $(PCAP_DIR)
+	cp $(PCAP_DIST_DIR)/*.pcap $(PCAP_DIR)
 	cd $(PCAP_DIR) \
 	   && wget https://github.com/zeek/zeek/archive/master.zip \
 	   && unzip -qq master.zip \
