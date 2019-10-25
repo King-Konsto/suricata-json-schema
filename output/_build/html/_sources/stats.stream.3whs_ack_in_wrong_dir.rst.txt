@@ -10,7 +10,7 @@ stats.stream.3whs_ack_in_wrong_dir
    * - First supported Suricata release
      - 3.0.1
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

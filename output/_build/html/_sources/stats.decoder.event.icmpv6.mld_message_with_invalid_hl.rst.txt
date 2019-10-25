@@ -10,7 +10,7 @@ stats.decoder.event.icmpv6.mld_message_with_invalid_hl
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

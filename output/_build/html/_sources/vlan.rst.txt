@@ -6,16 +6,16 @@ vlan
    :widths: 30 50
 
    * - Type
-     - {'anyOf': [{'type': 'integer'}, {'items': {'type': 'integer'}, 'type': 'array'}]}
+     - array
    * - First supported Suricata release
      - 2.0
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    
 .. meta::
-   :keywords: {'anyOf': [{'type': 'integer'}, {'items': {'type': 'integer'}, 'type': 'array'}]}
+   :keywords: array
 
 .. include:: vlan_content.rst.inc
 

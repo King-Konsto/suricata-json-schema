@@ -10,7 +10,7 @@ stats.file_store.open_files
    * - First supported Suricata release
      - 4.0.0
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

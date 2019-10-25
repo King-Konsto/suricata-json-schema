@@ -8,6 +8,28 @@
 
    dns.aa
 
+   dns.answer.aa
+
+   dns.answer.authorities
+
+   dns.answer.flags
+
+   dns.answer.id
+
+   dns.answer.qr
+
+   dns.answer.ra
+
+   dns.answer.rcode
+
+   dns.answer.rrname
+
+   dns.answer.rrtype
+
+   dns.answer.type
+
+   dns.answer.version
+
    dns.answers
 
    dns.authorities

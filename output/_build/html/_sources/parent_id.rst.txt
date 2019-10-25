@@ -8,9 +8,9 @@ parent_id
    * - Type
      - integer
    * - First supported Suricata release
-     - 4.1.0
+     - 4.1.1
    * - Latest supported Suricata release
-     - 4.1.4
+     - 4.1.5
    * - Date Generated
      - |today|
    

@@ -47,14 +47,55 @@
 <td>2.0</td>
 </tr>
 <tr class="row-odd"><td>Latest supported Suricata release</td>
-<td>4.1.4</td>
+<td>5.0</td>
 </tr>
 <tr class="row-even"><td>Date Generated</td>
-<td>Sep 27, 2019</td>
+<td>Oct 25, 2019</td>
 </tr>
 </tbody>
 </table>
-<h2>Description</h2><p>Please describe the field <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>.</p>
+<h2>Description</h2><p>This field contains a timestamp for the event as string in the format <code class="docutils literal notranslate"><span class="pre">yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'</span></code>. In live capture mode the local time of the system is used as timezone. When reading from pcap file the actual timestamp of the captured packets will be used.</p>
+<h2>Example</h2><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="hll">  <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-04-26T16:16:58.654077+0000&quot;</span><span class="p">,</span>
+</span>  <span class="nt">&quot;flow_id&quot;</span><span class="p">:</span> <span class="mi">254068186086141</span><span class="p">,</span>
+  <span class="nt">&quot;pcap_cnt&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="nt">&quot;event_type&quot;</span><span class="p">:</span> <span class="s2">&quot;alert&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;src_ip&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.18.50&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;src_port&quot;</span><span class="p">:</span> <span class="mi">56981</span><span class="p">,</span>
+  <span class="nt">&quot;dest_ip&quot;</span><span class="p">:</span> <span class="s2">&quot;74.125.239.97&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dest_port&quot;</span><span class="p">:</span> <span class="mi">443</span><span class="p">,</span>
+  <span class="nt">&quot;proto&quot;</span><span class="p">:</span> <span class="s2">&quot;006&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;community_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1:mE7ZEe7S0SodvA7zTSzrLULJU3Y=&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;alert&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;allowed&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;gid&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;signature_id&quot;</span><span class="p">:</span> <span class="mi">122</span><span class="p">,</span>
+    <span class="nt">&quot;rev&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;FOO TCP-PKT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;severity&quot;</span><span class="p">:</span> <span class="mi">3</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;flow&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;pkts_toserver&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;pkts_toclient&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;bytes_toserver&quot;</span><span class="p">:</span> <span class="mi">78</span><span class="p">,</span>
+    <span class="nt">&quot;bytes_toclient&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-04-26T16:16:58.654077+0000&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;payload&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;payload_printable&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;stream&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;packet&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;truncated&gt;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;packet_info&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;linktype&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;pcap_filename&quot;</span><span class="p">:</span> <span class="s2">&quot;/pcaps/smb2.pcap&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<h2>External references</h2><ul class="simple">
+<li><a class="reference external" href="https://tools.ietf.org/html/rfc3339">https://tools.ietf.org/html/rfc3339</a></li>
+</ul>
 </div>
 
 
@@ -66,6 +107,7 @@
 <h3><a href="index.html">Table Of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="alert.html">alert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anomaly.html">anomaly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_proto.html">app_proto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_proto_expected.html">app_proto_expected</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_proto_orig.html">app_proto_orig</a></li>
@@ -77,15 +119,18 @@
 <li class="toctree-l1"><a class="reference internal" href="dhcp.html">dhcp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dnp3.html">dnp3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns.html">dns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drop.html">drop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="email.html">email</a></li>
 <li class="toctree-l1"><a class="reference internal" href="event_type.html">event_type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileinfo.html">fileinfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flow.html">flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flow_id.html">flow_id</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ftp.html">ftp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ftp-data.html">ftp-data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="http.html">http</a></li>
 <li class="toctree-l1"><a class="reference internal" href="icmp_code.html">icmp_code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="icmp_type.html">icmp_type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ikev2.html">ikev2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="in_iface.html">in_iface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="krb5.html">krb5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metadata.html">metadata</a></li>
@@ -99,11 +144,14 @@
 <li class="toctree-l1"><a class="reference internal" href="pcap_cnt.html">pcap_cnt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pcap_filename.html">pcap_filename</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proto.html">proto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">rdp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="response_icmp_code.html">response_icmp_code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="response_icmp_type.html">response_icmp_type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rpc.html">rpc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sip.html">sip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smb.html">smb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smtp.html">smtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snmp.html">snmp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src_ip.html">src_ip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src_port.html">src_port</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh.html">ssh</a></li>

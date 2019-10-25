@@ -10,7 +10,7 @@ stats.decoder.event.ipv6.exthdr_ah_res_not_null
    * - First supported Suricata release
      - 4.1.3
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

@@ -10,7 +10,7 @@ in_iface
    * - First supported Suricata release
      - 2.0
    * - Latest supported Suricata release
-     - 3.0
+     - 5.0
    * - Date Generated
      - |today|
    

@@ -10,7 +10,7 @@ stats.defrag.max_frag_hits
    * - First supported Suricata release
      - 3.0
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    

@@ -17,8 +17,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="vars.flowbits.ET.RIGEKExploit" href="vars.flowbits.ET.RIGEKExploit.html" />
-    <link rel="prev" title="vars.flowbits.ET.HB.Request.SI" href="vars.flowbits.ET.HB.Request.SI.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -50,7 +48,7 @@
 <td>4.0.7</td>
 </tr>
 <tr class="row-even"><td>Date Generated</td>
-<td>Sep 27, 2019</td>
+<td>Oct 25, 2019</td>
 </tr>
 </tbody>
 </table>
@@ -64,8 +62,9 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <h3><a href="index.html">Table Of Contents</a></h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="alert.html">alert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anomaly.html">anomaly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_proto.html">app_proto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_proto_expected.html">app_proto_expected</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app_proto_orig.html">app_proto_orig</a></li>
@@ -77,15 +76,18 @@
 <li class="toctree-l1"><a class="reference internal" href="dhcp.html">dhcp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dnp3.html">dnp3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns.html">dns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drop.html">drop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="email.html">email</a></li>
 <li class="toctree-l1"><a class="reference internal" href="event_type.html">event_type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fileinfo.html">fileinfo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flow.html">flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flow_id.html">flow_id</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ftp.html">ftp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ftp-data.html">ftp-data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="http.html">http</a></li>
 <li class="toctree-l1"><a class="reference internal" href="icmp_code.html">icmp_code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="icmp_type.html">icmp_type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ikev2.html">ikev2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="in_iface.html">in_iface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="krb5.html">krb5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="metadata.html">metadata</a></li>
@@ -99,11 +101,14 @@
 <li class="toctree-l1"><a class="reference internal" href="pcap_cnt.html">pcap_cnt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pcap_filename.html">pcap_filename</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proto.html">proto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rdp.html">rdp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="response_icmp_code.html">response_icmp_code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="response_icmp_type.html">response_icmp_type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rpc.html">rpc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sip.html">sip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smb.html">smb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smtp.html">smtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snmp.html">snmp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src_ip.html">src_ip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src_port.html">src_port</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh.html">ssh</a></li>
@@ -115,45 +120,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tls.html">tls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tunnel.html">tunnel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tx_id.html">tx_id</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="vars.html">vars</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.html">vars.flowbits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.EOT.Download.html">vars.flowbits.ET.EOT.Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.HB.Request.SI.html">vars.flowbits.ET.HB.Request.SI</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">vars.flowbits.ET.INFO.WindowsUpdate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.RIGEKExploit.html">vars.flowbits.ET.RIGEKExploit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.SuspExeTLDs.html">vars.flowbits.ET.SuspExeTLDs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.Symantec.Site.Download.html">vars.flowbits.ET.Symantec.Site.Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.pdf.in.http.html">vars.flowbits.ET.pdf.in.http</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.realEDUrequest.html">vars.flowbits.ET.realEDUrequest</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.smb.binary.html">vars.flowbits.ET.smb.binary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.xls.dde.drop.html">vars.flowbits.ET.xls.dde.drop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ET.zipfile.html">vars.flowbits.ET.zipfile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.et.IE7.NoRef.NoCookie.html">vars.flowbits.et.IE7.NoRef.NoCookie</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.et.MS.XMLHTTP.no.exe.request.html">vars.flowbits.et.MS.XMLHTTP.no.exe.request</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.et.http.PK.html">vars.flowbits.et.http.PK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.exe.no.referer.html">vars.flowbits.exe.no.referer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.http.dottedquadhost.html">vars.flowbits.http.dottedquadhost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.http.dottedquadhost.dll.html">vars.flowbits.http.dottedquadhost.dll</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.is_proto_irc.html">vars.flowbits.is_proto_irc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.ms.rdp.synack.html">vars.flowbits.ms.rdp.synack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowbits.tcp.retransmission.alerted.html">vars.flowbits.tcp.retransmission.alerted</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowints.html">vars.flowints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowints.applayer.anomaly.count.html">vars.flowints.applayer.anomaly.count</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowints.http.anomaly.count.html">vars.flowints.http.anomaly.count</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowints.tcp.retransmission.count.html">vars.flowints.tcp.retransmission.count</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vars.flowints.tls.anomaly.count.html">vars.flowints.tls.anomaly.count</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="vars.html">vars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vlan.html">vlan</a></li>
 </ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="vars.html">vars</a><ul>
-      <li>Previous: <a href="vars.flowbits.ET.HB.Request.SI.html" title="previous chapter">vars.flowbits.ET.HB.Request.SI</a></li>
-      <li>Next: <a href="vars.flowbits.ET.RIGEKExploit.html" title="next chapter">vars.flowbits.ET.RIGEKExploit</a></li>
-  </ul></li>
   </ul></li>
 </ul>
 </div>

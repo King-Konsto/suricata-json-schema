@@ -10,7 +10,7 @@ pcap_cnt
    * - First supported Suricata release
      - 2.0
    * - Latest supported Suricata release
-     - 4.1.4
+     - 5.0
    * - Date Generated
      - |today|
    
