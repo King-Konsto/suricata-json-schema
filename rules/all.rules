@@ -24,4 +24,5 @@ drop http 145.254.160.237 3372 -> 65.208.228.223 80 (msg:"FOO DROP"; content:"/d
 alert rdp any any -> any any (msg:"FOO RDP"; threshold: type both, track by_src, count 5, seconds 60; sid:126;)
 alert snmp any any -> any any (msg:"FOO SNMP"; threshold: type both, track by_src, count 5, seconds 60; sid:127;)
 alert sip any any -> any any (msg:"FOO SIP"; threshold: type both, track by_src, count 5, seconds 60; sid:128;)
+alert tcp-stream any any -> any any (msg:"FOO TCP-STREAM"; threshold: type both, track by_src, count 5, seconds 60; sid:129;)
 
